@@ -1,0 +1,12 @@
+.root {
+  display: grid;
+}
+
+.container {
+  row-gap: 3rem;
+  display: grid;
+  padding: 3rem 1.5rem;
+  max-width: 768px;
+  margin: auto;
+  place-items: center center;
+}

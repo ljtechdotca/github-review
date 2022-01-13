@@ -1,0 +1,59 @@
+:root {
+  --javascript: #f1e05a;
+  --typescript: #2b7489;
+  --scss: #c6538c;
+  --shell: #89e051;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  background-color: dodgerblue;
+  border: 2px solid dodgerblue;
+  color: white;
+  border-radius: 6px;
+  transition: 0.2s ease background-color;
+  &:hover {
+    color: dodgerblue;
+    background-color: transparent;
+  }
+}
+
+form {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+input {
+  font-size: 1rem;
+  border: 2px solid #f7f7f7;
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: unset;
+}
+
+* {
+  color: #555;
+  padding: 0;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
+}

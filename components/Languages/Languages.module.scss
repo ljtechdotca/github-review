@@ -1,0 +1,34 @@
+.root {
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  border: 2px solid #f7f7f7;
+}
+
+.item {
+  position: relative;
+  height: 1rem;
+  &:hover {
+    .tooltip {
+      visibility: visible;
+      opacity: 1;
+      bottom: calc(100% + 0.5rem);
+    }
+  }
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.125rem);
+  border-radius: 3px;
+  padding: 0.5rem;
+  z-index: 100;
+  color: #ffffff;
+  bottom: 100%;
+  transition: 0.4s ease opacity, 0.2s ease bottom;
+}

@@ -1,0 +1,46 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+  border: 2px solid #f7f7f7;
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: 0.2s ease border-color;
+  &:hover {
+    border-color: dodgerblue;
+  }
+}
+
+.container {
+  display: flex;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  flex: 1 1 0%;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.cell {
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.contents {
+  display: grid;
+  row-gap: 0.5rem;
+  h3,
+  h4 {
+    color: #555555;
+    font-weight: 600;
+  }
+  p {
+    font-size: 0.8125rem;
+  }
+}
