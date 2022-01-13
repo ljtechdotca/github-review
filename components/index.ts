@@ -1,7 +1,6 @@
 export * from "./Alert/Alert";
 export * from "./Footer/Footer";
 export * from "./Form/Form";
-export * from "./Header/Header";
 export * from "./Icon/Icon";
 export * from "./Languages/Languages";
 export * from "./Layout/Layout";

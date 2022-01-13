@@ -1,4 +1,4 @@
-import { Footer, Header, Meta } from "@components";
+import { Footer, Meta } from "@components";
 import { ItemsContext, MessageContext } from "@lib/context";
 import { Item } from "@types";
 import { useState } from "react";
@@ -20,7 +20,6 @@ export const Layout = ({ children }: LayoutProps) => {
             title="GitHub Review"
             description="Find what languages you use most with this GitHub Review tool."
           />
-          <Header />
           <main className={styles.container}>{children}</main>
           <Footer />
         </div>

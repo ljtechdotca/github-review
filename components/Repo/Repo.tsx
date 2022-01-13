@@ -1,8 +1,4 @@
-import { Languages, User } from "@components";
-import ForkIcon from "@public/fork.svg";
-import IssueIcon from "@public/issue.svg";
-import StarIcon from "@public/star.svg";
-import WatcherIcon from "@public/watcher.svg";
+import { Icon, Languages, User } from "@components";
 import { Item } from "@types";
 import styles from "./Repo.module.scss";
 
@@ -21,19 +17,19 @@ export const Repo = ({ item }: RepoProps) => {
     >
       <div className={styles.container}>
         <div className={styles.cell}>
-          <ForkIcon width={16} height={16} />
+          <Icon type="fork" width={16} height={16} />
           <span>{item.forks}</span>
         </div>
         <div className={styles.cell}>
-          <StarIcon width={16} height={16} />
+          <Icon type="star" width={16} height={16} />
           <span>{item.stargazersCount}</span>
         </div>
         <div className={styles.cell}>
-          <WatcherIcon width={16} height={16} />
+          <Icon type="watcher" width={16} height={16} />
           <span>{item.watchersCount}</span>
         </div>
         <div className={styles.cell}>
-          <IssueIcon width={16} height={16} />
+          <Icon type="issue" width={16} height={16} />
           <span>{item.openIssuesCount}</span>
         </div>
         <div className={styles.cell}>

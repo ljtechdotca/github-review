@@ -35,6 +35,12 @@
 .contents {
   display: grid;
   row-gap: 0.5rem;
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.8125rem;
+  }
   h3,
   h4 {
     color: #555555;

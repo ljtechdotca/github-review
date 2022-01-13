@@ -1,5 +1,24 @@
 .root {
+  display: grid;
+  padding: 3rem 1.5rem;
+  border-top: 2px solid #f7f7f7;
 }
-  
+
 .container {
+  place-items: center center;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.contents {
+  display: flex;
+  column-gap: 0.75rem;
+}
+
+.item {
+  display: grid;
+  transition: 0.2s ease opacity;
+  &:hover {
+    opacity: 0.75;
+  }
 }
