@@ -10,7 +10,7 @@ export const User = ({ owner }: UserProps) => {
   return (
     <div className={styles.root}>
       <div className={styles.avatar}>
-        <Image alt={owner.id} src={owner.avatarUrl} width={48} height={48} />
+        <Image alt={owner.id} src={owner.avatarUrl} width={24} height={24} />
       </div>
       <div className={styles.container}>
         <h2>/{owner.login}</h2>

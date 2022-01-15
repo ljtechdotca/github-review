@@ -45,6 +45,7 @@ const fetchGitHubUserItems = async (url: string) => {
     });
   } catch (error) {
     console.error(error);
+    return { items: null };
   }
   return { items: itemsResult };
 };
@@ -58,12 +59,14 @@ export const githubHandler = async (
     query: { user },
   } = req;
   let data = { status: false, message: "Bad Method", payload: {} };
-  const url = `https://api.github.com/search/repositories?q=user:${user}+is:public&page=1&per_page=10&sort=updated`;
+  const url = `https://api.github.com/search/repositories?q=user:${encodeURIComponent(
+    user as string
+  )}+is:public&page=1&per_page=10&sort=updated`;
   try {
     switch (method) {
       case "GET":
         let { items } = await fetchGitHubUserItems(url);
-
+        if (!items) throw new Error("⚠ No User Found");
         data.status = true;
         data.message = "GET Method";
         data.payload = { items };
@@ -75,6 +78,9 @@ export const githubHandler = async (
         break;
     }
   } catch (error) {
+    if (error instanceof Error) {
+      data.message = error.message;
+    }
     res.status(500).json(data);
   }
 };

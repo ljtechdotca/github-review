@@ -12,13 +12,16 @@ export const Form = ({}: FormProps) => {
     event.preventDefault();
     setMessage("Fetching Data...");
     try {
-      const response = await fetch(`/api/users?user=${user}`);
+      const response = await fetch(
+        `/api/users?user=${encodeURIComponent(user)}`
+      );
       const data = await response.json();
       const {
+        message,
         payload: { items },
       } = data;
       setItems(items);
-      setMessage(null);
+      setMessage(message);
     } catch (error) {
       console.error(error);
       setMessage("Server Error");
