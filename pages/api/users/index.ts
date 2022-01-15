@@ -58,7 +58,7 @@ export const githubHandler = async (
     query: { user },
   } = req;
   let data = { status: false, message: "Bad Method", payload: {} };
-  const url = `https://api.github.com/search/repositories?q=user:${user}%2bis:public&page=1&per_page=10&sort=updated`;
+  const url = `https://api.github.com/search/repositories?q=user:${user}+is:public&page=1&per_page=10&sort=updated`;
   try {
     switch (method) {
       case "GET":
