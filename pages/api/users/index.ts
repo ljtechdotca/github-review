@@ -1,7 +1,7 @@
+import { Item } from "@types";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { Item } from "../../../types";
 
-const token = process.env.GITHUB_TOKEN;
+const TOKEN = process.env.GITHUB_TOKEN;
 
 type Data = {
   status: boolean;
@@ -14,7 +14,7 @@ const fetchGitHubUserItems = async (url: string) => {
   try {
     const response = await fetch(url, {
       headers: {
-        Authorization: `token ${token}`,
+        Authorization: `token ${TOKEN}`,
       },
     });
     const data = await response.json();
@@ -58,7 +58,7 @@ export const githubHandler = async (
     query: { user },
   } = req;
   let data = { status: false, message: "Bad Method", payload: {} };
-  const url = `https://api.github.com/search/repositories?q=user:${user}&page=1&per_page=10&sort=updated`;
+  const url = `https://api.github.com/search/repositories?q=user:${user}%2bis:public&page=1&per_page=10&sort=updated`;
   try {
     switch (method) {
       case "GET":
